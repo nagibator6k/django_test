@@ -1,18 +1,21 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 from forms import regestration
+from models import user
 def main(request):
     return render(request,'main/main2.html')
 
 def reg(request):
     if request.method == "метод":
         reg = regestration(request.method)
-        if reg.na:
+        if reg != user.objects.filter(name = 'name'):
             reg.save()
+        else:
+            error ="Такое имя пользователя уже занято"
 
     reg = regestration
 
-    data = {'reg': reg}
+    data = {'reg': reg,'error': error}
     return render(request,'main/registration.html',data)
 
 def cm(request):
