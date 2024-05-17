@@ -36,8 +36,25 @@
           <div class="header__user-nav">
             <div class="header__user-profile">
               <a href="{% url 'reg' %}">
-                <img src="{% static 'main/files/profile.svg' %}" alt="profile">
+                <img src="{% static 'main/files/profile.svg' %}" alt="profile" class="profile">
               </a>
+              <div class="user__profile-list">
+                <a href="{% url 'prof' %}" class="profile__blocks-link">
+                  <div class="profile__blocks">
+                    Мой профиль
+                  </div>
+                </a>
+                <a href="" class="profile__blocks-link">
+                  <div class="profile__blocks">
+                    Избранные
+                  </div>
+                </a>
+                <a href="#" class="profile__blocks-link" id="turn-to-black" >
+                  <div class="profile__blocks" id="black__turn" >
+                    Темная тема
+                  </div>
+                </a>
+              </div>
             </div>
           </div>
         </div>
@@ -156,7 +173,7 @@
   </div>
 </body>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-<script src="js/coctails_like.js"></script>
-<script src="js/main_search_ingridientslist.js"></script>
+<script src="{% static 'main/js/coctails_like.js' %}"></script>
+<script src="js/turn_to_black.js"></script>
 
 </html>

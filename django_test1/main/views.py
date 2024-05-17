@@ -11,3 +11,9 @@ def cm(request):
 
 def search_of_ingrid(request):
     return render(request, "main/search_of_ingrid.html")
+
+def prof(request):
+    return render(request, "main/my_profile.html")
+
+def log(request):
+    return render(request, "main/login.html")
