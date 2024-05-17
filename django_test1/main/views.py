@@ -12,14 +12,3 @@ def about(request):
 
 def reg(request):
     return render(request,'main/registration.html')
-
-def Regestration(request):
-    if request.method == "метод":
-        reg = regestration(request.method)
-        if reg.na:
-            reg.save()
-
-    reg = regestration
-
-    data = {'reg': reg}
-    return render(request, 'main/registration.html', data)
