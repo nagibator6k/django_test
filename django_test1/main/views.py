@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from django.http import HttpResponse
+from forms import regestration
 def main(request):
     return render(request,'main/main2.html')
 
