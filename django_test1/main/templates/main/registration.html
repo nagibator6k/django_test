@@ -26,6 +26,8 @@
                     </a>
                     <div class="main__register-blocks">
                         <form action="" class="main__register-buttons">
+                            {% csrf_token %}
+                            {{ reg }}
                             <label for="" class="register__label">Регистрация</label>
                             <div class="main__register-button">
                                 <input type="text" name="name" class="register__button-input"  placeholder="a" required />
