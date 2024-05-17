@@ -5,4 +5,3 @@ class user (models.Model):
     name = models.CharField(max_length=25, blank=False)
     password = models.CharField(max_length=25, blank=False)
 
-
